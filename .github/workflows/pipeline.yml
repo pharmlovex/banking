@@ -25,7 +25,13 @@ jobs:
       with:
         version: ${{ matrix.NXF_VER }}
     
+    - name: Install nf-test 
+      run: . ./nf-test-install
+    
     - name: test nextflow installation
       run: nextflow -v 
+    - name: test nf-test installation
+      run: nf-test -v 
+    
 
     
