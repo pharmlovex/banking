@@ -1,0 +1,31 @@
+name: Test Pipeline
+
+on:
+  push: 
+    branches: 
+      - main
+
+env:
+  NXF_ANSI_LOG: false
+
+jobs:
+  test:
+    name: testing pipeline self-hosted runner
+    runs-on: [self-hosted, linux, x64]
+    strategy:
+      matrix:
+        NXF_VER: [23.10.0]
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install Nextflow
+      uses: nf-core/setup-nextflow@v1
+      with:
+        version: ${{ matrix.NXF_VER }}
+    
+    - name: test nextflow installation
+      run: nextflow -v 
+
+    
