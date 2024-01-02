@@ -30,8 +30,9 @@ jobs:
     
     - name: test nextflow installation
       run: nextflow -v 
+
     - name: test nf-test installation
-      run: nf-test -v 
+      run: nf-test version 
     
 
     
