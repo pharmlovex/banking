@@ -16,7 +16,7 @@ class BankOperation:
             self.balance -= amount
 
 
-if "__name__" == "__main__":
+if __name__ == "__main__":
     access = BankOperation("Access Bank", 123456)
     access.deposit(1000)
     access.withdraw(500)
