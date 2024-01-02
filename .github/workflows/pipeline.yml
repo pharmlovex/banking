@@ -25,14 +25,14 @@ jobs:
       with:
         version: ${{ matrix.NXF_VER }}
     
-    - name: Install nf-test 
-      run: . ./nf-test-install
+    - name: Download nf-test
+      run: curl -fsSL https://code.askimed.com/install/nf-test | bash -s 0.8.1
     
     - name: test nextflow installation
       run: nextflow -v 
 
     - name: test nf-test installation
-      run: nf-test version 
+      run: ./nf-test version 
     
 
     

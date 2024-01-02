@@ -4,6 +4,6 @@
 # usage example:
 #    $  . ./nf-test-install
 
-curl -fsSL https://code.askimed.com/install/nf-test | bash -s 0.8.1 -b $HOME/bin
+curl -fsSL https://code.askimed.com/install/nf-test | bash -s 0.8.1 
 
 
