@@ -4,8 +4,6 @@
 # usage example:
 #    $  . ./nf-test-install
 
-curl -fsSL https://code.askimed.com/install/nf-test | bash -s 0.8.1 && \
-mkdir -p bin && \
-mv nf-test bin && cd bin && export PATH=$PATH:$(pwd) &&\
-cd -
+curl -fsSL https://code.askimed.com/install/nf-test | bash -s 0.8.1 -b $HOME/bin
+
 
